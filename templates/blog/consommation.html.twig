@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% form_theme formCompteur 'bootstrap_4_layout.html.twig' %}
+{% block body %} 
+{{ form_start(formCompteur) }}
+{{form_widget(formCompteur)}}
+<button type="submit" class="btn btn-success">AjouteurCompteur</button>
+{{ form_end(formCompteur) }}
+{% endblock %}

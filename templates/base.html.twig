@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}SENFORAGE!{% endblock %}</title>
+        <link rel="stylesheet"  href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+				<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+				  <a class="navbar-brand" href="/">SENEFORAGE</a>
+				  <button class="navbar-toggler collapsed" aria-expanded="false" aria-controls="navbarColor01" aria-label="Toggle navigation" type="button" data-target="#navbarColor01" data-toggle="collapse">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="navbar-collapse collapse" id="navbarColor01">
+				    <ul class="navbar-nav mr-auto">
+				    	 <li class="nav-item">
+				        <a class="nav-link" href="{{ path('clients') }}">Gestion des Clients</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ path('abonnes') }}">Gestion des Abonnements</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ path('consommation') }}">Gestion des Consommations</a>
+				      </li>
+				       <li class="nav-item">
+				        <a class="nav-link" href="{{ path('facture') }}">Gestion des Factures</a>
+				      </li>
+				    </ul>
+				  </div>
+				</nav>
+		<div class="container">	
+		{% block body %}
+		{% endblock %}
+		</div>
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

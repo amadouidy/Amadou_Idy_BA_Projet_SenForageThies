@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% form_theme formFacturation 'bootstrap_4_layout.html.twig' %}
+{% block body %} 
+{{ form_start(formFacturation) }}
+{{form_widget(formFacturation)}}
+<button type="submit" class="btn btn-success">
+{% if changerbouton %}
+Enregistrer les modification
+{% else %}
+AjouteurFacture
+{% endif %}
+</button>
+{{ form_end(formFacturation) }}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% form_theme formAbonnement 'bootstrap_4_layout.html.twig' %}
+{% block body %} 
+{{ form_start(formAbonnement) }}
+{{form_widget(formAbonnement)}}
+<button type="submit" class="btn btn-success">
+{% if modifierbouton %}
+Enregistrer les modification
+{% else %}
+AjouteurAbonnement
+{% endif %}
+</button>
+{{ form_end(formAbonnement) }}
+
+{% endblock %}
